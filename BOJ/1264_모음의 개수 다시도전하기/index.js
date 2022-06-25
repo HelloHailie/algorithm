@@ -5,13 +5,10 @@ const input = fs.readFileSync("test.txt").toString().trim().split("\n");
 // 2. 배열 안의 문자열 중 모음이 있으면 숫자 count를 +1 해준다.
 // 3. 이 과정을 input의 갯수-1만큼 한다.
 
-while(true){
-  let ans = 0
-  for(let i = 0; i < input.length-1; i++) {
-    if(input)
-  }
+while (true) {
+  let ans = 0;
+  for (let i = 0; i < input.length - 1; i++) {}
 }
-
 
 // console.log(input[0]);
 // console.log(input.length);
