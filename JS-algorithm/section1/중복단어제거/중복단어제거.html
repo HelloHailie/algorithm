@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = "";
+        // //방법1
+        // for (let i = 0; i < s.length; i++) {
+        //   if (s.indexOf(s[i]) === i) {
+        //     answer += s[i] + "\n";
+        //   }
+        // }
+        answer = s.filter((v, i) => i === s.indexOf(v));
+        return answer;
+      }
+      let str = ["good", "time", "good", "time", "student"];
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
