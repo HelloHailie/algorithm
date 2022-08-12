@@ -1,6 +1,8 @@
 const fs = require("fs");
-const input = +fs.readFileSync("/dev/stdin").toString();
+const num = fs.readFileSync("/dev/stdin").toString();
 
-for (let i = input; i > 0; i--) {
-  console.log(" ".repeat(input - i) + "*".repeat(i));
+const star = "*";
+
+for (let x = num; x > 0; x--) {
+  console.log(" ".repeat(num - x) + star.repeat(x));
 }
