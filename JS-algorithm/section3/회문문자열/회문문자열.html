@@ -7,27 +7,19 @@
     <script>
       function solution(s) {
         let answer;
-        let n = s.length;
-        let fore = "";
-        let last = "";
-        for (let i = 0; i < n; i++) {
-          fore += s[i].toLowerCase();
-          console.log(fore);
-        }
-        for (let j = n - 1; j >= 0; j--) {
-          last += s[j].toLowerCase();
-          console.log(last);
-        }
-
-        if (fore === last) {
-          answer = "YES";
-        } else {
-          answer = "NO";
+        s = s.toLowerCase();
+        let len = s.length;
+        for (let i = 0; i < Math.floor(len / 2); i++) {
+          if (s[i] !== s[len - i - 1]) {
+            answer = "NO";
+          } else {
+            answer = "YES";
+          }
         }
         return answer;
       }
 
-      let str = "goooG";
+      let str = "gootG";
       console.log(solution(str));
     </script>
   </body>
