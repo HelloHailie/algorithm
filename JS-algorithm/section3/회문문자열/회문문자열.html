@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer;
+        let n = s.length;
+        let fore = "";
+        let last = "";
+        for (let i = 0; i < n; i++) {
+          fore += s[i].toLowerCase();
+          console.log(fore);
+        }
+        for (let j = n - 1; j >= 0; j--) {
+          last += s[j].toLowerCase();
+          console.log(last);
+        }
+
+        if (fore === last) {
+          answer = "YES";
+        } else {
+          answer = "NO";
+        }
+        return answer;
+      }
+
+      let str = "goooG";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
