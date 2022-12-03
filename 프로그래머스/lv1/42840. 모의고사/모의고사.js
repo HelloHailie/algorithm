@@ -19,17 +19,4 @@ function solution(answers) {
     if(max === threeResult) answer.push(3);
     
     return answer;
-    // return returnResultFuntion(oneResult,twoResult,threeResult);
 }
-
-// function returnResultFuntion (a,b,c) {
-//     let result = []
-//     if(a > b && a > c) result = [1];
-//     if(b > a && b > c) result = [2];
-//     if(c > a && c > b) result = [3];
-//     if(a === b && a > c) result = [1,2];
-//     if(b === c && b > a) result = [2,3];
-//     if(c === a && c > b) result = [1,3];
-//     if(a === b && b === c && c === a) result = [1,2,3]
-//     return result;
-// }
