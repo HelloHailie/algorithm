@@ -5,9 +5,8 @@
 
 function solution(array) {
     var answer = 0;
-    const newArr = array.map(a => a.toString()).join('')
-    for(let i = 0; i < newArr.length; i++){
-        if(newArr[i] === '7') answer++;
-    }
-    return answer;
+    const newArr = array.join('').split('');
+    return newArr.filter(a => a === '7').length
+    
+    // return newArr
 }
