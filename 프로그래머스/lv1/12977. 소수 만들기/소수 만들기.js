@@ -3,7 +3,6 @@
 // 소수이면 answer에 더하기 1을 해준다.
 function solution(nums) {
     var answer = 0;
-    let randomArray = []
     for(let i = 0; i < nums.length; i++){
         for(let j = i + 1; j < nums.length; j++){
             for(let k = j + 1; k < nums.length; k++){
