@@ -1,6 +1,6 @@
 function solution(before, after) {
-    const sortBefore = before.split('').sort()
-    const sortAfter = after.split('').sort()
-    console.log(sortBefore, sortAfter)
-    return sortBefore.filter((el,idx) => el === sortAfter[idx]).length === sortAfter.length ? 1 : 0;
+    const sortBefore = before.split('').sort().join();
+    const sortAfter = after.split('').sort().join();
+    // console.log(sortBefore === sortAfter)
+    return sortBefore === sortAfter ? 1 : 0;
 }
