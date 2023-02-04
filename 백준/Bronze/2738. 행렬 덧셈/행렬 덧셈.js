@@ -1,26 +1,18 @@
 const fs = require("fs");
-let input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
+let input = fs
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n")
+  .map((x) => x.split(" ").map(Number));
 
-const [x, y] = input[0].split(" ");
+const [N, M] = input.shift();
 
-input.shift();
-const newArr = input.join(" ").split(" ").map(Number);
-
-let result = [];
-
-for (let i = 0; i < x * y; i++) {
-  result.push(newArr[i] + newArr[i + x * y]);
-}
-
-for (let i = 0; i < x; i++) {
-  for (let j = 0; j < y; j++) {
-    const firstNum = String(result.shift());
-    if (j === y - 1) {
-      process.stdout.write(firstNum + "\n");
-    } else if (i === x - 1 && j === y - 1) {
-      process.stdout.write(firstNum);
-    } else {
-      process.stdout.write(firstNum + " ");
-    }
+let output = "";
+for (let i = 0; i < N; i++) {
+  for (let j = 0; j < M; j++) {
+    output += input[i][j] + input[i + N][j] + " ";
   }
+  output += "\n";
 }
+console.log(output);
