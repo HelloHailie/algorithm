@@ -1,14 +1,24 @@
 function solution(n) {
     let count = 1;
-    let result = 1;
-    for(let i = 1; i <= count; i++){
-        
-        let value = result *= i
-        
-        if(value <= n){
-            count++
+    
+    while(true) {
+        if (factorial(count) > n) {
+            return count - 1;
+        } else {
+            count++;
         }
     }
+}
+
+function factorial(n) {
+    if (n === 1) {
+        return 1;
+    }
     
-    return count - 1;
+    let result = 1;
+    for (var i = 2; i < n + 1; i++) {
+        result *= i;
+    }
+    
+    return result;
 }
